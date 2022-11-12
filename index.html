@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>BANKING SYSTEM WITH JAVASCRIPT</title>
+</head>
+
+<body>
+    <section class="container">
+        <div class="holder">
+            <button type="button" class="new-act-btn">NEW ACCOUNT</button>
+            <button type="button" class="new-trs-btn">NEW TRANSACTION</button>
+            <button type="button" class="new-depo-btn">DEPOSIT</button>
+            <button type="button" class="new-with-btn" style="background: red; color: white">WITHDRAW</button>
+            <button type="button" onclick="bank.getLastTransaction()">LAST TRANSACTION</button>
+            <button type="button" onclick="bank.checkBalance()">BALANCE</button>
+        </div>
+    </section>
+
+<!-- new account -->
+    <section class="new-act n-act">
+        <div class="holder">
+            <input type="text" class="username" placeholder="Account Name">
+            <input type="password" class="password" placeholder="Pin">
+            <div class="btn-holder">
+                <button class="new-person" onclick="bank.createUser()">CREATE ACCOUNT</button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- transfer validation -->
+    <section class="new-act n-trs">
+        <div class="holder">
+            <input type="password" class="trf-pin" placeholder="Pin">
+            <div class="btn-holder">
+                <button onclick="bank.validTransfer()">PROCEED</button>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- transfer validation -->
+    <section class="new-act trs-c">
+        <div class="holder">
+            <input type="password" class="trs" placeholder="Account Number">
+            <div class="btn-holder">
+                <button onclick="bank.accountTransfer()">PROCEED</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- transfer -->
+    <section class="new-act trf-send">
+        <div class="holder">
+            <input type="text" class="user" placeholder="Account Name">
+            <input type="text" class="user_acn" placeholder="Account Number">
+            <input type="text" class="amount" placeholder="Enter amount">
+            <div class="btn-holder">
+                <button class="new-person" onclick="bank.transfer()">TRANSFER</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="new-act tras-v">
+        <div class="holder">
+            <input type="password" class="valid-pin" placeholder="Pin">
+            <div class="btn-holder">
+                <button onclick="bank.trsValid()">PROCEED</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="new-act tras-v1">
+        <div class="holder">
+            <input type="password" class="valid-pin1" placeholder="Pin">
+            <div class="btn-holder">
+                <button onclick="bank.trsValid1()">PROCEED</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- withdraw -->
+    <section class="new-act with-draw">
+        <div class="holder">
+            <input type="text" class="with_amount" placeholder="Amount to withdraw">
+            <div class="btn-holder">
+                <button class="new-person" onclick="bank.withDraw()">WITHDRAW</button>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- withdraw -->
+    <section class="new-act depo">
+        <div class="holder">
+            <input type="text" class="depo_amount" placeholder="Amount to deposit">
+            <div class="btn-holder">
+                <button class="new-person" onclick="bank.deposit()">DEPOSIT</button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

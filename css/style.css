@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+}
+
+.container {
+    padding: 30px 0; 
+    background: #000000;
+    display: flex;
+    align-items: center; /* y axis */
+    justify-content: center; /* x axis */
+}
+
+.container .holder {
+    background: white;
+    box-shadow: 0 0 60px -5px black;
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.container .holder button {
+    font-size: 1.2rem;
+    padding: 0.9rem 3rem;
+    border: 0;
+    background: #24ff78;
+    border-radius: inherit;
+    font-size: 13px;
+}
+
+.container .holder button:nth-of-type(2) {
+    background: #269ff0;
+    color: white;
+}
+
+
+/* CREATE NEW ACCOUNT CSS */
+.new-act {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-act .holder {
+    background: white;
+    box-shadow: 0 0 60px -5px black;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.new-act .holder input {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.7rem;
+    width: 400px;
+    border: 0;
+    border-bottom: 2px solid grey;
+}
+
+.new-act .holder .btn-holder button{
+    border: 0;
+    padding: 0.9rem;
+    width: 200px;
+    background: #0e8b47;
+    color: white;
+    border-radius: 5px;
+}
